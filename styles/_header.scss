@@ -1,0 +1,62 @@
+@import "./variables";
+@import "./global";
+
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    @extend .flex;
+    justify-content: space-between;
+    z-index: 100000;
+    padding: 27px 17px;
+    .logo{
+        font-size:20px;
+        font-weight: 700;
+        color: $text-color;
+        span{
+            color: $main-color;
+        }
+    }
+    /*  Navbar-Links Area   */
+    .nav-links{
+        @extend .flex;
+        gap: 25px;
+        a{
+            color: $text-color;
+            font-size: $p-font;
+            font-weight: 500;
+            /* margin: 15px 22px;  gap yerine kullanılabilir. */
+            @extend .transition;
+            &:hover{
+                color: $main-color;
+            }
+        }
+    }
+    .nav-social{
+        @extend .flex;
+        gap: 20px;
+        a{
+            color: $text-color;
+            @extend .transition;
+           &:hover{
+            color:$main-color;
+            transform: translateY(-10px);
+           }
+        }
+        a:first-child{
+            font-size: $p-font;
+            margin-right: 10px;
+        }
+    }
+}
+/*  Responsive Design  */
+@media (max-width:1250px){
+.nav-links li{
+    display: none;
+}
+}
+@media (max-width:650px){
+    .nav-social a{
+        display: none;
+    }
+}

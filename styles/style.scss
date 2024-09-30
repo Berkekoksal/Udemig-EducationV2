@@ -1,0 +1,56 @@
+/*
+*   Google Fonts font-family: "Open Sans", sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+/* 
+*   Css Sıfırlama  */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    /*  Sayfa içerisindeki geçişleri daha yumuşak hale getirir.  */
+    scroll-behavior: smooth;
+    font-family: "Open Sans", sans-serif;
+}
+/* 
+*  Scss Import  */
+@import "./variables";
+@import "./header";
+@import "./main";
+@import "./educationscourses";
+@import "./aboutus";
+@import "./popularcourses";
+@import "./contactus";
+@import "./footer";
+
+/* 
+*  Joint Css  */
+body{
+    background-color: $bg-color;
+    color: $text-color;
+}
+section{
+    padding: 70px 17% 60px ;
+}
+.btn{
+    display: inline-block;
+    background-color: $main-color;
+    color: $bg-color;
+    border: $text-color;
+    padding: 13px 40px;
+    font-size: 15px;
+    font-weight: 600;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    @extend .transition;
+    &:hover{
+        color: $text-color;
+        background-color: transparent;
+        border:2px solid $text-color;
+        transform: translateX(10px);
+    }
+}

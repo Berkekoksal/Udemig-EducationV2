@@ -1,0 +1,29 @@
+.flex{
+    display: flex;
+    align-items: center;
+}
+.transition{
+    transition: all 0.5s ease;
+}
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    h2{
+        font-size: 22px;
+        font-weight: 600;
+        margin-bottom: 15px;
+        color: $text-color;
+
+    }
+    a{
+        font-size: $p-font;
+        color: $gray;
+        margin-top: 10px;
+        @extend .transition;
+        &:hover{
+            color: $main-color;
+            transform: translateX(10px);
+        }
+    }
+}
